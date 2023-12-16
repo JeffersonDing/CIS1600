@@ -1,0 +1,101 @@
+\section{Counting \& Probability}
+\begin{theorem}[Multiplicatoin Rule]
+	For all $n\in \mathbb{Z}^+$, if a task consists of $n$ steps, where the $i$th step can be done in $n_i$ ways, then the task can be done in $\prod_{i=1}^n n_i$ ways.
+\end{theorem}
+
+\begin{theorem}[Permutation of Multisets]
+	If there ar $n_1$ $T_1$ objects, $n_2$ $T_2$ objects, $\hdots$, $n_k$ $T_k$ objects, then there are
+	$$
+	\frac{(n_1 + n_2 + \hdots + n_k)!}{n_1!n_2!\hdots n_k!}
+	$$
+	ways to arrange them.
+\end{theorem}
+
+\begin{theorem}[r-Combinations with Repetition]
+	For all $n,r\in \mathbb{Z}^+$, there are
+	$$
+	\binom{n+r-1}{r}
+	$$
+	ways to choose $r$ objects from $n$ types of objects with repetition.
+\end{theorem}
+
+\begin{theorem}[Pascals Formula]
+	For all $n,r\in \mathbb{Z}^+$, $\binom{n}{r} = \binom{n-1}{r-1} + \binom{n-1}{r}$
+\end{theorem}
+
+\begin{theorem}
+	$\sum_{i=0}^n \binom{n}{i} = 2^n$
+\end{theorem}
+
+\subsection*{Probability}
+\begin{theorem}[Conditional Probability]
+	For all events $A,B$,
+	$$
+	Pr[A|B] = \frac{Pr[A\cap B]}{Pr[B]}
+	$$
+\end{theorem}
+
+\begin{corollary}
+	For all events $A,B$,
+	$$
+	Pr[A\cap B] = Pr[A|B]Pr[B]
+	$$
+\end{corollary}
+
+\begin{theorem}[Total Probability Theorem]
+	For all events $A,B_1,\hdots,B_n$,
+	$$
+	Pr[A] = \sum_{i=1}^n Pr[A|B_i]Pr[B_i]
+	$$
+\end{theorem}
+
+\begin{theorem}
+	Event $A$ and $B$ are independent $\leftrightarrow$ $Pr[A\cap B] = Pr[A]Pr[B]$
+\end{theorem}
+
+\begin{theorem}[Expected Value]
+	For all events $A_1,\hdots,A_n$,
+	$$
+	E[X] = \sum_{i=1}^n Pr[A_i]X_i
+	$$
+\end{theorem}
+
+\begin{theorem}[Linearity of Expectation]
+	For all events $A_1,\hdots,A_n$,
+	$$
+	E[X] = \sum_{i=1}^n E[X_i]
+	$$
+\end{theorem}
+
+\begin{theorem}[Markov's Inequality]
+	For all random variables $X$ and $a>0$,
+	$$
+	Pr[X\geq a] \leq \frac{E[X]}{a}
+	$$
+\end{theorem}
+
+\begin{theorem}[Varience]]
+	For all random variables $X$,
+	$$
+	Var[X] = E[X^2] - E[X]^2
+	$$
+\end{theorem}
+
+\begin{theorem}
+If $X$ and $Y$ are independent random variables, then $E[XY] = E[X]E[Y]$ and $Var[X+Y] = Var[X] + Var[Y]$
+\end{theorem}
+
+\begin{theorem}
+	$E[Y] = \sum_{k=0}^\infty Pr[Y>k]$
+\end{theorem}
+
+\begin{theorem}[De'Morgan's Laws]
+	\begin{equation*}
+		\begin{split}
+			Pr[\overline{A\cup B}] = Pr[\overline{A}\cap \overline{B}]\\
+			Pr[\overline{A\cap B}] = Pr[\overline{A}\cup \overline{B}]
+		\end{split}
+	\end{equation*}
+\end{theorem}
+
+

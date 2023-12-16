@@ -1,0 +1,33 @@
+\section{Sets}
+\begin{theorem}
+	$$
+	|P(A)| = 2^{|A|}
+	$$
+\end{theorem}
+
+\begin{theorem}
+	$\mathcal{P}(A) \cup \mathcal{P}(B) = \mathcal{P}(A \cup B)$
+\end{theorem}
+
+\begin{theorem}
+	$(T\cap S)\cup (F\cap G) \subseteq (T\cup F)\cap (S\cup G)$
+\end{theorem}
+
+\begin{theorem}
+	$A\times B = B\times A \leftrightarrow A=B$
+\end{theorem}
+
+\begin{theorem}[De'Morgan's Laws]
+	\begin{equation*}
+		\begin{split}
+			A-(B\cup C) = (A-B)\cap (A-C)\\
+			A-(B\cap C) = (A-B)\cup (A-C)
+		\end{split}
+	\end{equation*}
+\end{theorem}
+
+\begin{theorem}[Principal of Inclusion-Exclusion]
+	$$
+	|A_i\cup \hdots\cup A_n| = \sum_{i=1}^n |A_i| - \sum_{i<j} |A_i \cap A_j| + \sum_{i<j<k} |A_i \cap A_j \cap A_k| - \hdots + (-1)^{n+1} |A_1 \cap A_2 \cap \hdots \cap A_n|
+	$$
+\end{theorem}

@@ -1,0 +1,179 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Jefferson Ding's Writing Template
+% Modified from Jefferson's IB Template
+% Modified from OIST Doctoral Thesis
+% LaTeX Template
+% Version 0.1 (2021/11)
+% Version 1.0 (2023/8)
+%
+% Author:
+% Jefferson Ding
+% Original author:
+% Jeremie Gillet
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-------------------------------------------------------------------------------
+%	REQUIRED PACKAGES AND  CONFIGURATIONS
+%-------------------------------------------------------------------------------
+
+\documentclass[final]{writing_template} 
+
+% The documentclass ib_template includes the following packages: geometry, caption, xkeyval
+
+\usepackage[english]{babel} % The document is in English
+\usepackage[utf8]{inputenc} % UTF8 encoding
+\usepackage[T1]{fontenc} % Font encoding
+
+\usepackage{graphicx} % For including images
+\graphicspath{{./img/}} % Specifies the directory where pictures are stored
+
+\usepackage{setspace} % For using single or double spacing
+\usepackage{longtable} % tables that can span several pages
+\usepackage{pdfpages} % To include a pdf files of your published papers as an appendix
+\usepackage{fancyhdr} % For the headers
+\usepackage{hyperref} % Adds clickable links at references
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+%----------------------------------------------------------------------------------------
+%	ADD YOUR PACKAGES (be careful of package interaction)
+%----------------------------------------------------------------------------------------
+
+\usepackage{amsthm,amsmath,amssymb,amsfonts,bbm}% Math symbols
+\usepackage{framed}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{xcolor}% or package color
+\usepackage{tocloft}
+%----------------------------------------------------------------------------------------
+%	ADD YOUR DEFINITIONS AND COMMANDS
+%----------------------------------------------------------------------------------------
+\newcommand{\quickwordcount}[1]{%
+  \immediate\write18{texcount -1 -sum -merge -q #1.tex > #1-words.sum }%
+  \input{#1-words.sum}%
+}
+
+\newcommand{\e}[1]{\times 10^{#1}}  % Powers of 10 notation
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+
+%\newtheorem{theorem}{Theorem}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{proof}{Proof}[theorem]
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\usepackage{xpatch}
+\makeatletter
+\AtBeginDocument{\xpatchcmd{\@thm}{\thm@headpunct{.}}{\thm@headpunct{}}{}{}}
+\makeatother
+
+%-------------------------------------------------------------------------------
+%	TITLE PAGE
+%-------------------------------------------------------------------------------
+
+\begin{document}
+\pagestyle{empty} % No page numbers
+
+\puttitle{
+	papertitle={Theorems, Lemmas \& Proofs},% Title of the paper
+  %rq = {Calculus II Cheatsheet},
+  school = {University of Pennsylvania},
+  subject = {CIS 1600},
+	name = {Jefferson Ding},
+  submissiondate = {F23},
+}
+
+
+
+%-------------------------------------------------------------------------------
+%	PREAMBLE PAGES (comment unnecessary pages)
+%-------------------------------------------------------------------------------
+
+\startpreamble
+
+
+
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES
+%-------------------------------------------------------------------------------
+
+\unnumberedsection{Contents}
+\tableofcontents % Write out the Table of Contents
+\singlespacing
+
+
+
+%\unnumberedsection{Table of Equations}
+%\singlespacing
+%\listofmyequations
+%\tableofcontents % Write out the Table of Contents
+
+
+
+%-------------------------------------------------------------------------------
+%	PAPER MAIN TEXT
+%-------------------------------------------------------------------------------
+
+\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+
+\numberedsection
+% Review
+%\input{src/section0} 
+% Vectors, Lines and Planes
+%\input{src/section1}
+% Vector Calculus
+%\input{src/section2}
+% Matrices
+%\input{src/section3}
+% Coordinate Systems
+%\input{src/section4}
+% Determinants
+%\input{src/section5}
+ %Derivatives
+%\input{src/section6}
+%\input{src/week1}
+%\input{src/week2}
+%\input{src/week3}
+%\input{src/week4}
+\input{src/numbertheory}
+\input{src/sets}
+\input{src/countingprob}
+\input{src/graph}
+\input{src/relationfunction}
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+%	APPENDICES (optional)
+%-------------------------------------------------------------------------------
+
+%\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+\appendix
+\numberedsection % Regular sections following
+\input{apx/appendixA}
+%\input{apx/appendixB}
+%\input{apx/appendixC}
+
+
+\end{document}

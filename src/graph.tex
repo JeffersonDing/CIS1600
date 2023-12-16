@@ -1,0 +1,182 @@
+\section{Graph Theory}
+
+\subsection*{General Graphs}
+\begin{lemma}[Handshaking Lemma]
+	For any graph $G$, the sum of the degrees of all vertices is twice the number of edges. That is:
+	$$
+	\sum_{v \in V} \deg(v) = 2|E|
+	$$
+\end{lemma}
+
+\begin{theorem}
+	There is an even amount of vertices with odd degree in any graph $G$.
+\end{theorem}
+
+\begin{theorem}
+	Graph with $n$ vertices and $m$ edges must have $\geq n-m$ connected components
+\end{theorem}
+
+\begin{corollary}
+	Each connected graph must have at least $n-1$ edges
+\end{corollary}
+
+\begin{theorem}
+	Graph $G=(V,E)$ has $|V|\geq 1$ and $|E| \geq 1$, then $|V| \leq |V|^2-2|E|$
+\end{theorem}
+
+\begin{theorem}
+	If $v$ is a cut vertex in $G$, $v$ is not a cut vertex in $\overline{G}$ and $\overline{G}$ is connected.
+\end{theorem}
+
+\begin{theorem}
+	Either $G$ or $\overline{G}$ is connected. Where $\overline{G}$ is the complement of $G$.
+\end{theorem}
+
+\subsection*{Trees}
+\begin{theorem}
+	The following are equivalent for a graph $G$:
+	\begin{enumerate}
+		\item $G$ is a tree
+		\item $G$ is connected and has $|V|-1$ edges
+		\item $G$ is minimally connected, $G-e$ is disconnected for any $e\in E$
+		\item $G$ is acyclic and $G+\{x,y\}$ for non-adjacent $x,y\in V$ creates a unique cycle
+		\item $G$ There is a unique path between any two vertices
+	\end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+	Every connected graph contains a spanning subtree.
+\end{theorem}
+
+\begin{theorem}
+	A full binary tree with $k$ internal vertices has $2k+1$ vertices and $k+1$ leaves.
+\end{theorem}
+
+\begin{theorem}
+	A binary tree of height $h$ has at most $2^h$ leaves.
+\end{theorem}
+
+
+\begin{theorem}
+	For any graph with $\delta(G)\geq 2$, $G$ contains a cycle
+\end{theorem}
+
+\begin{theorem}
+	For any graph with $\delta(G)\geq \frac{n}{2}$, $G$ is connected
+\end{theorem}
+
+\begin{theorem}
+	A tree $T$ such that the degree of all vertices adjacent to a leaf is $\geq 3$ has leaf $x\neq y$ wherh $N(x) = N(y)$.
+\end{theorem}
+
+\begin{theorem}
+	Every three tree with $\geq 4$ leaves has some internal vertex thats adjacent to two leaves.
+\end{theorem}
+
+\begin{theorem}
+ Every three tree with $l$ has $l-2$ vertices of degree $3$.
+\end{theorem}
+
+\begin{theorem}
+	A tree $T$ must have at least $\Delta(T)$ leaves.
+\end{theorem}
+
+
+\subsection*{Eularian \& Hamiltonian Graphs}
+\begin{corollary}
+	For any graph with $\delta(G)\geq \frac{n}{2}$ and $n\geq 3$, $G$ is Hamiltonian
+\end{corollary}
+
+\begin{theorem}
+	If a graph contains a Eularian circuit $\rightarrow$ the line graph of $G$ is Hamiltonian
+\end{theorem}
+
+\subsection*{Planar Graphs}
+
+\begin{theorem}[Euler's Formula]
+	$n-m+f=2$ for any connected graph
+\end{theorem}
+
+\begin{theorem}
+	Sum of all degrees of faces in a crossing is $2|E|$
+\end{theorem}
+
+\begin{corollary}
+	$|E|\leq 3|V|-6$ for any planar graph with $|V|\geq 2$
+\end{corollary}
+
+\begin{theorem}
+	All planr graph have $\delta(G)\leq 5$
+\end{theorem}
+
+\begin{theorem}
+	A graph is planar $\leftrightarrow$ it contains no subdivision of $K_5$ or $K_{3,3}$
+\end{theorem}
+
+\begin{theorem}
+	If a graph is planar, $\chi(G)\leq 6$
+\end{theorem}
+
+\subsection*{Graph Coloring \& Matchings}
+
+\begin{theorem}
+	A graph with $\Delta(G)\leq k$, $G$ is $k+1$-colorable
+\end{theorem}
+
+\begin{theorem}
+	Graph $G$ is bipartite $\leftrightarrow$ $G$ contains no odd length cycle
+\end{theorem}
+
+\begin{theorem}
+	Matching $M$ is maximum $\leftrightarrow$ contains no $M$-augmenting path
+\end{theorem}
+
+\begin{theorem}[Hall's Theorem]
+	Bipartite graph $G=(X,Y,E)$ has a $X$-saturating matching $\leftrightarrow$ $|N(S)| \geq |S|$ for all $S\subseteq X$
+\end{theorem}
+
+\begin{theorem}
+	A n-vertex tournament graph has $\frac{n!}{2^{n-1}}$ Hamiltonian paths
+\end{theorem}
+
+\begin{theorem}
+	For graph $G=(V,E)$ and $d=\frac{2m}{n}$ is the average degree, $\alpha(G) \geq \frac{n}{2d}$
+\end{theorem}
+
+\begin{theorem}
+	For graph $G$ where $|V|\geq 2$ and $\delta(G)=\delta$ contains a dominating set of at most $\frac{n\cdot (1+\ln(1+\delta))}{1+\delta}$
+\end{theorem}
+
+\begin{theorem}
+	In graph $G$, For $k\in \mathbb{Z}^+$, if $n$ is larnge enough, there exists a $k$-dominated tournament on $n$ vertices.
+\end{theorem}
+
+\begin{theorem}
+	For a bipartite graph $G=(X,Y,E)$, $\delta(X)\geq \Delta(Y)$ there exists a $X$-saturating matching.
+\end{theorem}
+
+\begin{theorem}
+	For any graph $G=(V,E)$, there exists a partition of $V_1\cup V_2=V$ such that there are $\geq \frac{|E|}{2}$ edges between them.
+\end{theorem}
+
+\begin{theorem}
+	For $G=(V,E)$, if $\delta(G)\geq 2k$, then there exists a matching of size at least $k$.
+\end{theorem}
+
+\begin{theorem}
+	If every vertex in a bipartite graph $G=(X,Y,E)$ has the same degree $d\geq 0$, then $|X|=|Y|$
+\end{theorem}
+
+
+\begin{theorem}
+	If
+	$$
+\left(\begin{array}{l}
+n \\
+k
+\end{array}\right) 2^{1-\left(\begin{array}{c}
+k \\
+2
+\end{array}\right)}<1 \text {, then } R(k, k)>n
+$$
+\end{theorem}

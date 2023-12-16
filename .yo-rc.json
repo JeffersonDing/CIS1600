@@ -1,0 +1,10 @@
+{
+  "generator-texeverything": {
+    "promptValues": {
+      "bibliography": false,
+      "institution": "University of Pennsylvania",
+      "author": "Jefferson Ding",
+      "wordcount": false
+    }
+  }
+}
